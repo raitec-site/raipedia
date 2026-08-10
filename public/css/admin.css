@@ -1,0 +1,757 @@
+/* ========================================
+   RESET
+======================================== */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body{
+  font-family: Arial, sans-serif;
+
+  background-color: #f5f7fb;
+
+  color: #333;
+
+    font-family: Arial, sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8faff 0%,
+      #eef2ff 100%
+    );
+
+  color: #333;
+
+  min-height: 100vh;
+
+
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.admin-header{
+  background-color: #05053f;
+
+  color: white;
+
+  padding: 20px 40px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.admin-header h1{
+  font-size: 28px;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.admin-container{
+  padding: 40px;
+
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.btn{
+  border: none;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  transition: 0.3s;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+}
+
+.btn-primary{
+  background-color: #05053f;
+
+  color: white;
+}
+
+.btn-secondary{
+  background-color: #09CCCC;
+
+  color: white;
+}
+
+.btn-danger{
+  background-color: #d62828;
+
+  color: white;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.admin-grid{
+    display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+
+  align-items: stretch;
+
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card{
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  min-height: 240px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid #e6e9f2;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.04),
+    0 10px 25px rgba(0,0,0,0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* LINHA SUPERIOR */
+.card::before{
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background: linear-gradient(
+    90deg,
+    #05053f,
+    #09CCCC
+  );
+}
+
+
+/* HOVER */
+.card:hover{
+  transform: translateY(-8px);
+
+  border-color: #09CCCC;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.08),
+    0 18px 40px rgba(0,0,0,0.12);
+}
+
+
+/* TÍTULO */
+.card h2{
+  color: #05053f;
+
+  font-size: 24px;
+
+  margin-bottom: 15px;
+
+  font-weight: 700;
+}
+
+
+/* TEXTO */
+.card p{
+  color: #666;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+
+  margin-bottom: 30px;
+
+  flex-grow: 1;
+}
+
+
+/* BOTÃO DENTRO DO CARD */
+.card .btn{
+  width: 100%;
+
+  margin-top: auto;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+}
+
+.card h2{
+  color: #05053f;
+
+  margin-bottom: 15px;
+
+  font-size: 22px;
+}
+
+.card p{
+  color: #666;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+
+/* ========================================
+   FORMULÁRIOS
+======================================== */
+
+.admin-form{
+  background-color: white;
+
+  padding: 35px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  max-width: 800px;
+
+  margin: auto;
+}
+
+.admin-form h2{
+  margin-bottom: 30px;
+
+  color: #05053f;
+}
+
+.admin-form label{
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-weight: bold;
+
+  color: #05053f;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea{
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 10px;
+
+  margin-bottom: 25px;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus{
+  outline: none;
+
+  border-color: #09CCCC;
+
+  box-shadow: 0 0 0 3px rgba(9,204,204,0.2);
+}
+
+.admin-form textarea{
+  min-height: 140px;
+
+  resize: vertical;
+}
+
+
+/* ========================================
+   LISTAGEM DE MEMBROS
+======================================== */
+
+.admin-list{
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* ========================================
+   CARD MEMBRO
+======================================== */
+
+.admin-item{
+  background-color: white;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  transition: 0.3s;
+}
+
+.admin-item:hover{
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   INFO MEMBRO
+======================================== */
+
+.admin-item-info{
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.admin-item-info h3{
+  color: #05053f;
+
+  font-size: 22px;
+}
+
+.admin-item-info p{
+  color: #666;
+}
+
+
+/* ========================================
+   AÇÕES MEMBRO
+======================================== */
+
+.admin-item-actions{
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+
+/* ========================================
+   FOTO MEMBRO
+======================================== */
+
+.membro-foto{
+  width: 80px;
+
+  height: 80px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid #09CCCC;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status{
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  width: fit-content;
+}
+
+.status-ativo{
+  background-color: #d8f3dc;
+
+  color: #2d6a4f;
+}
+
+.status-inativo{
+  background-color: #ffe5e5;
+
+  color: #b00020;
+}
+
+
+/* ========================================
+   TABELAS
+======================================== */
+
+.admin-table{
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background-color: white;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.admin-table th{
+  background-color: #05053f;
+
+  color: white;
+
+  text-align: left;
+
+  padding: 18px;
+}
+
+.admin-table td{
+  padding: 18px;
+
+  border-bottom: 1px solid #eee;
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media(max-width: 768px){
+
+  .admin-header{
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  .admin-container{
+    padding: 20px;
+  }
+
+  .admin-item{
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .admin-item-actions{
+    width: 100%;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER DAS PÁGINAS */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+
+.page-header h1 {
+  color: #05053f;
+  font-size: 36px;
+}
+
+
+/* AÇÕES DOS CARDS */
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+
+.card-actions form {
+  margin: 0;
+}
+
+
+/* BOTÃO VERMELHO */
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+.btn-danger:hover {
+  background: #bb2d3b;
+}
+
+
+/* BOTÃO */
+
+button.btn {
+  font-size: 16px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CARD FORM */
+
+.form-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  max-width: 900px;
+}
+
+
+/* FORM */
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+/* GRUPO */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* LABEL */
+
+.form-group label {
+  font-weight: bold;
+  color: #05053f;
+}
+
+
+/* INPUTS */
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #dcdcdc;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+
+  outline: none;
+}
+
+
+/* FOCUS */
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+  border-color: #09CCCC;
+
+  box-shadow: 0 0 0 4px rgba(9, 204, 204, 0.15);
+}
+
+
+/* TEXTAREA */
+
+.admin-form textarea {
+  min-height: 150px;
+
+  resize: vertical;
+}
+
+
+/* CHECKBOX */
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: bold;
+  color: #05053f;
+}
+
+
+/* BOTÃO */
+
+.admin-form button {
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .form-card {
+    padding: 25px;
+  }
+
+}
